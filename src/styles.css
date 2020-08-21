@@ -1,33 +1,4 @@
-/**
- * border radius
- */
 
- .btn,
- .jumbotron,
- .nav :hover {
-     border-radius: 0px;
- }
- 
- /* cart badge */
- 
- .cart-badge,
- .cart-badge:hover {
-     border-radius: 50%;
-     padding: 2px;
-     font-size: 12px;
-     font-style: italic;
-     background: #000;
- }
- /**
-  * single product page - product name
-  */
- 
- .name {
-     background: indigo;
-     color: #fff;
-     font-weight: bold;
- }
- 
  /* black shade form 10-1 */
  .black-10 {
      background: #f2f2f2;
@@ -48,14 +19,23 @@
      background: #b3b3b3;
  }
  
- /**
-  * product image on card
-  */
+ 
+/***************************************************************************************************************************
+                               CARD IMAGE ON SHOP                                                        
+*****************************************************************************************************************************/
  
  .product-img {
+    text-align: center;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 250px;
+     object-fit: cover;
      min-height: 100px;
- }
+ } 
  
+ /***************************************************************************************************************************
+                                JUMBOTRON                                                   
+*****************************************************************************************************************************/
  .jumbotron h2 {
      margin-top: -20px;
  }
@@ -65,12 +45,11 @@
          margin-top: 10px;
      }
  }
- 
- /**
-  * jumbotron animation
-  */
- 
- .jumbotron {
+
+/*  
+  jumbotron animation */
+
+   .jumbotron {
      height: 180px;
      color: #fff;
      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -115,3 +94,410 @@
          background-position: 0% 50%;
      }
  }
+
+
+/***************************************************************************************************************************
+                                        NAV BAR                                                    
+*****************************************************************************************************************************/
+.form-inline {
+	display: inline-block;
+}
+.navbar-header.col {
+	padding: 0 !important;
+}	
+.navbar {		
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #d6d6d6;
+	box-shadow: 0 0 4px rgba(0,0,0,.1);
+}
+
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.nav-link {
+	margin: 0 5px;
+}
+.nav-link img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin: -8px 0;
+	float: left;
+	margin-right: 10px;
+}
+.navbar .navbar-brand {
+	color: #555;
+	padding-left: 0;
+	font-size: 20px;
+	padding-right: 20px;
+	font-family: 'Raleway', sans-serif;
+}
+.navbar .navbar-brand b {
+	font-weight: bold;
+	color: black;
+}
+.navbar-brand{
+    margin-right: -1rem
+}
+.navbar .navbar-nav a:hover, .navbar .navbar-nav a:focus {
+	color: #f08373 !important;
+}
+.navbar .navbar-nav a.active, .navbar .navbar-nav a.active:hover {
+	color: #eb5844 !important;
+	background: transparent !important;
+}
+
+.navbar .nav-item i {
+    font-size: 18px;
+}
+.navbar .dropdown-item i {
+	font-size: 16px;
+	min-width: 22px;
+}
+.navbar .nav-item.show > a {
+	background: none !important;
+}
+.navbar .dropdown-menu {
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu a {
+	color: #777;
+	padding: 8px 20px;
+	line-height: normal;
+	font-size: 15px;
+}
+
+.navbar .nav-flex-icons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+/***************************************************************************************************************************
+                               SOCIAL ICONS                                                      
+*****************************************************************************************************************************/
+.fa-facebook:hover{
+    color: blue;
+}
+
+.fa-whatsapp:hover{
+    color: green;
+}
+
+.fa-youtube:hover{
+    color: red;
+}
+
+.fa-instagram:hover{
+    color: lightcoral;
+}
+
+.fa-twitter:hover{
+    color: skyblue;
+}
+
+/***************************************************************************************************************************
+                                 BANNER HOME PAGE                                                     
+*****************************************************************************************************************************/
+
+              .banner-section {
+                text-align: center;
+                padding-top: 2em;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .banner-grid h2 {
+                font-size: 2.5em;
+                text-transform: capitalize;
+                font-weight: 600;
+                color: #000;
+                font-family: 'Raleway', sans-serif;
+            }
+            .banner-grid p {
+               font-size: 1em;
+               color: black;
+               margin: 1em auto 2em;
+               line-height: 1.8em;
+               font-family: 'Raleway', sans-serif;
+            }
+            .banner-grid {
+                margin-top: 15em;
+            }
+
+            .banner-grid {
+                float: left;
+                /* width: 100%; */
+                margin-bottom: 20px;
+            }
+            .banner-grid1 {
+                float: left;
+                width: 100%;
+               }
+
+           
+            a.button {
+                font-size: 1em;
+                text-decoration: none;
+                border: 2px solid #000;
+                padding: 0.5em 4em;
+                color: #000;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            a.button:hover {
+                cursor: pointer;
+                background-color: #000;
+                color: #fff;
+            }
+
+
+            .img-responsive{
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+            /* .banner-bottom{
+                border-top: 2px solid black;
+            } */
+            .item img {
+                width: 100%;
+            }
+            .item {
+              position: relative;
+             }
+           
+            .item:hover div.item-info {
+              display: block;
+            }
+          
+            .footer-section {
+                padding: 4em 0;
+                border-top: 5px solid black;
+                background-color: black;
+            }
+            .footer-grids{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            .social-icons{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                
+            }
+            .social-icons a{
+                color: white;
+            }
+
+ /***************************************************************************************************************************
+                                 FOOTER                                                
+*****************************************************************************************************************************/
+            .footer-grid h4 {
+                font-size: 1.1em;
+                text-transform: uppercase;
+                color: white;
+                margin-bottom:0.5em;
+            }
+            .footer-grid ul li {
+                list-style: none;
+            }
+            .footer-grid ul li a:hover {
+                color: gray;
+            }
+            .footer-grid ul li a {
+                font-size: 0.9em;
+                text-decoration: none;
+                line-height: 2em;
+                color: white;
+                list-style: none;
+                text-transform: capitalize;
+            }
+            .footer-grid1 p a {
+                color: white;
+                margin-left: 6px;
+            }
+            .footer-grid1 h4 {
+                color: white;
+                margin-left: 6px;
+            }
+            .footer-grid1 p {
+                font-size: 0.9em;
+                color: white;
+                line-height: 1.8em;
+            }
+
+            .carousel-item img{
+                width: 100%;
+                height: 500px;
+            }
+
+/***************************************************************************************************************************
+                                MEDIA QUERY AND RESPONSIVE SECTION                                                          
+*****************************************************************************************************************************/
+            
+            @media(max-width:1366px){
+              
+                }
+
+                @media(max-width:1280px){
+                  
+                    
+                 
+                    }
+            @media(max-width:1080px){
+                .banner-grid h2{ 
+                    font-size: 2em;
+                }
+                .banner-grid p{
+                    font-size: 0.96em;
+                }
+                .banner-grid {
+                    float: left;
+                    width: 50%;
+                }
+                .banner-grid1 {
+                    float: left;
+                    width: 50%;
+                }
+                .footer-grid h4 {
+                    font-size: 1em;
+                }
+             
+            }
+
+            .product-Detail-img{
+                text-align: center;
+                height: 400px;
+            }
+
+            @media(max-width:991px){
+                .banner-grid h2{
+                    font-size: 1.6em;
+                }
+                .banner-section {
+                    padding-top: 3em;
+                }
+                .banner-grid {
+                    float: left;
+                    width: 50%;
+                    margin-top: 10em;
+                }
+                .banner-grid1 {
+                    float: left;
+                    width: 50%;
+                }
+                .banner-grid h1 {
+                    font-size: 1.8em;
+                }
+                .banner-grid p{
+                    font-size: 0.94em;
+                }
+                a.button {
+                    font-size: 0.95em;
+                }
+                .footer-section {
+                    padding: 3em 0;
+                }
+               
+               
+            }
+
+            @media (max-width:640px){
+                .banner-grid h1 {
+                    font-size: 1.5em;
+                }
+                .banner-grid h2{
+                    font-size: 1.5em;
+                }
+                .footer-grid1 {
+                    width: 100%;
+                    margin-top: 1em;
+                }
+                .footer-grid {
+                    width: 100%;
+                    margin-top: 1em;
+                }
+                .carousel-item img{
+                    height: 500px;
+                }
+            }
+            @media (max-width: 480px){
+                .banner-grid {
+                    width: 100%;
+                    margin-top: 3em;
+                }
+                .banner-grid1 {
+                    width: 100%;
+                }
+                .banner-grid1 img {
+                    width: 100%;
+                    margin: 2em auto 0;
+                }
+                .banner-section {
+                    padding-top: 2em;
+                }
+                a.button {
+                    font-size: 0.92em;
+                    padding: 0.5em 2em;
+                }
+                .banner-grid p{
+                    font-size: 0.92em;
+                }
+
+                .footer-section {
+                    padding: 2em 0;
+                }
+                .carousel-item img{
+                    height: 350px;
+                }
+            }
+            @media (max-width: 320px){
+                .banner-section {
+                    padding-top: 0em;
+                }
+                .banner-grid h2{
+                    font-size: 1.3em;
+                }
+                .banner-grid p{
+                    font-size: 0.9em;
+                }
+                .banner-grid {
+                    margin-top: 1em;
+                    padding: 0;
+                }
+                a.button {
+                    font-size: 0.8em;
+                }
+                .footer-section {
+                    padding: 1em 0;
+                }
+                .carousel-item img{
+                    height: 250px;
+                }
+            }

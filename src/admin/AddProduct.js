@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../core/Layout';
 import { isAuthenticated } from '../auth';
 import { createProduct, getCategories } from './apiAdmin';
-
+import Menu from '../core/Menu';
 const AddProduct = () => {
     const [values, setValues] = useState({
         name: '',
@@ -80,7 +79,7 @@ const AddProduct = () => {
     };
 
     const newPostForm = () => (
-        <form className="mb-3" onSubmit={clickSubmit}>
+        <form className="mb-3 mt-2" onSubmit={clickSubmit}>
             <h4>Post Photo</h4>
             <div className="form-group">
                 <label className="btn btn-secondary">
@@ -145,7 +144,9 @@ const AddProduct = () => {
         );
 
     return (
-        <Layout title="Add a new product" description={`G'day ${user.name}, ready to add a new product?`}>
+        <div>
+            <Menu />
+            <div className="container mt-5 pt-5">
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showLoading()}
@@ -154,7 +155,8 @@ const AddProduct = () => {
                     {newPostForm()}
                 </div>
             </div>
-        </Layout>
+            </div>
+            </div>
     );
 };
 

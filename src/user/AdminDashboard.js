@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
+import Menu from '../core/Menu';
 import { Link } from "react-router-dom";
 
 const AdminDashboard = () => {
@@ -28,6 +28,8 @@ const AdminDashboard = () => {
                             Manage Products
                         </Link>
                     </li>
+
+                   
                 </ul>
             </div>
         );
@@ -49,16 +51,17 @@ const AdminDashboard = () => {
     };
 
     return (
-        <Layout
-            title="Dashboard"
-            description={`G'day ${name}!`}
-            className="container-fluid"
-        >
+        <div>
+        <Menu />
+        <br/><br/> <br/><br/>
+            <div className="container">
             <div className="row">
-                <div className="col-3">{adminLinks()}</div>
-                <div className="col-9">{adminInfo()}</div>
+            <div className="col-9">{adminInfo()}</div>
+                <div className="col-sm">{adminLinks()}</div>
+             
             </div>
-        </Layout>
+            </div>
+            </div>
     );
 };
 

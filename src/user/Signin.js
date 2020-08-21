@@ -92,9 +92,9 @@ const Signin = () => {
 
     return (
         <Layout
-            title="Signin"
-            description="Signin to Node React E-commerce App"
-            className="container col-md-8 offset-md-2"
+            title="Admin"
+            description=""
+            className="container mt-5 col-md-8 offset-md-2"
         >
             {showLoading()}
             {showError()}

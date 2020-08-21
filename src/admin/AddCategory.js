@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link } from "react-router-dom";
 import { createCategory } from "./apiAdmin";
+import Menu from '../core/Menu';
 
 const AddCategory = () => {
     const [name, setName] = useState("");
@@ -34,7 +34,7 @@ const AddCategory = () => {
 
     const newCategoryFom = () => (
         <form onSubmit={clickSubmit}>
-            <div className="form-group">
+            <div className="form-group mt-3">
                 <label className="text-muted">Name</label>
                 <input
                     type="text"
@@ -70,10 +70,9 @@ const AddCategory = () => {
     );
 
     return (
-        <Layout
-            title="Add a new category"
-            description={`G'day ${user.name}, ready to add a new category?`}
-        >
+            <div>
+                <Menu />
+                <div className="container mt-5 pt-5">
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showSuccess()}
@@ -82,7 +81,9 @@ const AddCategory = () => {
                     {goBack()}
                 </div>
             </div>
-        </Layout>
+            </div>
+            </div>
+      
     );
 };
 

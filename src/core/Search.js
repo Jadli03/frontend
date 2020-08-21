@@ -63,17 +63,23 @@ const Search = () => {
     const searchedProducts = (results = []) => {
         return (
             <div>
-                <h2 className="mt-4 mb-4">
+                <h2 className="ml-5 mt-4 mb-4">
                     {searchMessage(searched, results)}
                 </h2>
+                <div className="col-lg-9">
 
-                <div className="row">
-                    {results.map((product, i) => (
-                      //<div className="col-8 mb-3">
-                            <Card key={i} product={product} />
-                      // </div>
-                    ))}
+                    <div className="row">
+                        {results.map((product, i) => (
+                            <div className="col-lg-3 col-md-6 mb-4 ml-5">
+                                <Card product={product} />
+                            </div>
+                        ))}
+                        <hr />
+
+                    </div>
+
                 </div>
+
             </div>
         );
     };
@@ -81,7 +87,7 @@ const Search = () => {
     const searchForm = () => (
         <form onSubmit={searchSubmit}>
             <span className="input-group-text">
-                <div className="input-group input-group-lg">  
+                <div className="input-group input-group-lg">
                     <div className="input-group-prepend">
                         <select
                             className="btn mr-2"
@@ -95,28 +101,28 @@ const Search = () => {
                             ))}
                         </select>
                     </div>
-
                     <input
                         type="search"
                         className="form-control"
                         onChange={handleChange("search")}
-                        placeholder="Search by name"
+                        placeholder="Search"
                     />
                 </div>
                 <div
                     className="btn input-group-append"
-                    style={{ border: "none" }}
+
                 >
                     <button className="input-group-text">Search</button>
                 </div>
+
             </span>
         </form>
     );
 
     return (
         <div className="row">
-            <div className="container mb-3">{searchForm()}</div>
-            <div className="container-fluid mb-3">
+            <div className="container mb-2">{searchForm()}</div>
+            <div className="container-fluid mb-1">
                 {searchedProducts(results)}
             </div>
         </div>

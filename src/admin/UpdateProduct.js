@@ -186,7 +186,7 @@ const UpdateProduct = ({ match }) => {
     };
 
     return (
-        <Layout title="Add a new product" description={`G'day ${user.name}, ready to add a new product?`}>
+        <Layout title="Update product" description={`G'day ${user.name}, ready to Update product?`}>
             <div className="row">
                 <div className="col-md-8 offset-md-2">
                     {showLoading()}

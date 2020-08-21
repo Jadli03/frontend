@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./Layout";
 import Card from "./Card";
 import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./CheckBox";
-import RadioBox from "./RadioBox";
 import { prices } from "./fixedPrice";
 import Search from './Search';
+import Menu from './Menu';
+import Footer from './Footer';
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -97,48 +97,47 @@ const Shop = () => {
     };
 
     return (
-        <Layout
-            title="Shop Page"
-            description="Search and find your choice"
-            className="container-fluid"
-        >
+        <div>
+            <Menu />
+            <br /> <br /> <br />
             <Search />
-            <div className="row">
-                <div className="col-4">
-                    <h4>Filter by categories</h4>
-                    <ul>
-                        <Checkbox
-                            categories={categories}
-                            handleFilters={filters =>
-                                handleFilters(filters, "category")
-                            }
-                        />
-                    </ul>
-
-                    {/* <h4>Filter by price range</h4>
-                    <div>
-                        <RadioBox
-                            prices={prices}
-                            handleFilters={filters =>
-                                handleFilters(filters, "price")
-                            }
-                        />
-                    </div> */}
-                </div>
-                <div className="col-8">
-                    <h2 className="mb-4">Products</h2>
-                    <div className="row">
-                        {filteredResults.map((product, i) => (
-                            <div key={i} className="col-4 mb-3">  
-                                <Card product={product} style={{width:'18rem'}} />
-                            </div>
-                        ))}
+            <div className="container">
+                <div className="row ">
+                    <div className="col-lg-2 ">
+                    <h4>Categories</h4>
+                   <ul>
+                       <Checkbox
+                           categories={categories}
+                           handleFilters={filters =>
+                               handleFilters(filters, "category")
+                           }
+                       />
+                   </ul>
                     </div>
-                    <hr />
-                    {loadMoreButton()}
+
+                    <div className="col-lg-9 ">
+
+
+                        <div className="row">
+                            {filteredResults.map((product, i) => (
+                                <div className="col-lg-4 col-md-6 mb-4">
+                                    <Card key={i} product={product}/>
+                                </div>
+                            ))}
+                            <hr />
+                            {loadMoreButton()}
+
+                        </div>
+
+                    </div>
+
                 </div>
-           </div>
-        </Layout>
+
+
+            </div>
+            <Footer />
+        </div>
+
     );
 };
 
