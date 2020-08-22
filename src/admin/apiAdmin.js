@@ -1,7 +1,7 @@
 import { API } from '../config';
 
 export const createCategory = (userId, token, category) => {
-    return fetch(`${API}/category/create/${userId}`,{ mode: 'no-cors' }, {
+    return fetch(`${API}/category/create/${userId}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -9,7 +9,7 @@ export const createCategory = (userId, token, category) => {
             Authorization: `Bearer ${token}`
         },
         body: JSON.stringify(category)
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -19,7 +19,7 @@ export const createCategory = (userId, token, category) => {
 };
 
 export const updateCategory = (categoryId, userId, token, category) => {
-    return fetch(`${API}/category/${categoryId}/${userId}`, { mode: 'no-cors' }, {
+    return fetch(`${API}/category/${categoryId}/${userId}`,{
         method: 'PUT',
         headers: {
             // content type?
@@ -28,7 +28,7 @@ export const updateCategory = (categoryId, userId, token, category) => {
             Authorization: `Bearer ${token}`
         },
         body: JSON.stringify(category)
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -36,14 +36,14 @@ export const updateCategory = (categoryId, userId, token, category) => {
 };
 
 export const createProduct = (userId, token, product) => {
-    return fetch(`${API}/product/create/${userId}`, { mode: 'no-cors' }, {
+    return fetch(`${API}/product/create/${userId}`,{
         method: 'POST',
         headers: {
             Accept: 'application/json',
             Authorization: `Bearer ${token}`
         },
         body: product
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -53,9 +53,9 @@ export const createProduct = (userId, token, product) => {
 };
 
 export const getCategory = categoryId => {
-    return fetch(`${API}/category/${categoryId}`, { mode: 'no-cors' }, {
+    return fetch(`${API}/category/${categoryId}`,{
         method: 'GET'
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -63,9 +63,9 @@ export const getCategory = categoryId => {
 };
 
 export const getCategories = () => {
-    return fetch(`${API}/categories`,{ mode: 'no-cors' }, {
+    return fetch(`${API}/categories`, {
         method: 'GET'
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -73,13 +73,13 @@ export const getCategories = () => {
 };
 
 export const listOrders = (userId, token) => {
-    return fetch(`${API}/order/list/${userId}`, { mode: 'no-cors' },{
+    return fetch(`${API}/order/list/${userId}`,{
         method: 'GET',
         headers: {
             Accept: 'application/json',
             Authorization: `Bearer ${token}`
         }
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -93,7 +93,7 @@ export const getStatusValues = (userId, token) => {
             Accept: 'application/json',
             Authorization: `Bearer ${token}`
         }
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -109,7 +109,7 @@ export const updateOrderStatus = (userId, token, orderId, status) => {
             Authorization: `Bearer ${token}`
         },
         body: JSON.stringify({ status, orderId })
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -127,7 +127,7 @@ export const updateOrderStatus = (userId, token, orderId, status) => {
 export const getProducts = () => {
     return fetch(`${API}/products?limit=undefined`, {
         method: 'GET'
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -142,7 +142,7 @@ export const deleteProduct = (productId, userId, token) => {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`
         }
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -152,7 +152,7 @@ export const deleteProduct = (productId, userId, token) => {
 export const getProduct = productId => {
     return fetch(`${API}/product/${productId}`, {
         method: 'GET'
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
@@ -167,7 +167,7 @@ export const updateProduct = (productId, userId, token, product) => {
             Authorization: `Bearer ${token}`
         },
         body: product
-    })
+    },{ mode: 'no-cors' })
         .then(response => {
             return response.json();
         })
