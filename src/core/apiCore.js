@@ -3,7 +3,7 @@ import queryString from "query-string";
 export const getProducts = sortBy => {
     return fetch(`${API}/products?sortBy=${sortBy}&order=desc&limit=6`, {
         method: "GET"
-    }, { mode: 'no-cors' })
+    })
         .then(response => {
             return response.json();
         })
@@ -13,7 +13,7 @@ export const getProducts = sortBy => {
 export const getCategories = () => {
     return fetch(`${API}/categories`,  {
         method: "GET"
-    },{ mode: 'no-cors' })
+    })
         .then(response => {
             return response.json();
         })
@@ -33,7 +33,7 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
-    }, { mode: 'no-cors' })
+    })
         .then(response => {
             return response.json();
         })
@@ -47,7 +47,7 @@ export const list = params => {
     console.log("query", query);
     return fetch(`${API}/products/search?${query}`,{
         method: "GET"
-    }, { mode: 'no-cors' })
+    })
         .then(response => {
             return response.json();
         })
@@ -57,7 +57,7 @@ export const list = params => {
 export const read = productId => {
     return fetch(`${API}/product/${productId}`,{
         method: "GET"
-    }, { mode: 'no-cors' })
+    })
         .then(response => {
             return response.json();
         })
@@ -67,7 +67,7 @@ export const read = productId => {
 export const listRelated = productId => {
     return fetch(`${API}/products/related/${productId}`,{
         method: "GET"
-    }, { mode: 'no-cors' })
+    })
         .then(response => {
             return response.json();
         })
