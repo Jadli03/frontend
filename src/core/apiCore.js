@@ -1,7 +1,7 @@
 import { API } from '../config';
 import queryString from "query-string";
 export const getProducts = sortBy => {
-    return fetch(`${API}/products?sortBy=${sortBy}&order=desc&limit=6`, { mode: 'no-cors' }, {
+    return fetch(`${API}/products?sortBy=${sortBy}&order=desc&limit=6`,{ mode: 'no-cors' }, {
         method: "GET"
     })
         .then(response => {
@@ -26,7 +26,7 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
         skip,
         filters
     };
-    return fetch(`${API}/products/by/search`,{ mode: 'no-cors' }, {
+    return fetch(`${API}/products/by/search`, { mode: 'no-cors' },{
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -45,7 +45,7 @@ export const getFilteredProducts = (skip, limit, filters = {}) => {
 export const list = params => {
     const query = queryString.stringify(params);
     console.log("query", query);
-    return fetch(`${API}/products/search?${query}`, { mode: 'no-cors' }, {
+    return fetch(`${API}/products/search?${query}`, { mode: 'no-cors' },{
         method: "GET"
     })
         .then(response => {
@@ -55,7 +55,7 @@ export const list = params => {
 };
 
 export const read = productId => {
-    return fetch(`${API}/product/${productId}`,{ mode: 'no-cors' }, {
+    return fetch(`${API}/product/${productId}`, { mode: 'no-cors' },{
         method: "GET"
     })
         .then(response => {
@@ -65,7 +65,7 @@ export const read = productId => {
 };
 
 export const listRelated = productId => {
-    return fetch(`${API}/products/related/${productId}`, { mode: 'no-cors' }, {
+    return fetch(`${API}/products/related/${productId}`, { mode: 'no-cors' },{
         method: "GET"
     })
         .then(response => {

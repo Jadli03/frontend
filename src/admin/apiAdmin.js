@@ -1,7 +1,7 @@
 import { API } from '../config';
 
 export const createCategory = (userId, token, category) => {
-    return fetch(`${API}/category/create/${userId}`, {
+    return fetch(`${API}/category/create/${userId}`,{ mode: 'no-cors' }, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -19,7 +19,7 @@ export const createCategory = (userId, token, category) => {
 };
 
 export const updateCategory = (categoryId, userId, token, category) => {
-    return fetch(`${API}/category/${categoryId}/${userId}`, {
+    return fetch(`${API}/category/${categoryId}/${userId}`, { mode: 'no-cors' }, {
         method: 'PUT',
         headers: {
             // content type?
@@ -36,7 +36,7 @@ export const updateCategory = (categoryId, userId, token, category) => {
 };
 
 export const createProduct = (userId, token, product) => {
-    return fetch(`${API}/product/create/${userId}`, {
+    return fetch(`${API}/product/create/${userId}`, { mode: 'no-cors' }, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -53,7 +53,7 @@ export const createProduct = (userId, token, product) => {
 };
 
 export const getCategory = categoryId => {
-    return fetch(`${API}/category/${categoryId}`, {
+    return fetch(`${API}/category/${categoryId}`, { mode: 'no-cors' }, {
         method: 'GET'
     })
         .then(response => {
@@ -63,7 +63,7 @@ export const getCategory = categoryId => {
 };
 
 export const getCategories = () => {
-    return fetch(`${API}/categories`, {
+    return fetch(`${API}/categories`,{ mode: 'no-cors' }, {
         method: 'GET'
     })
         .then(response => {
@@ -73,7 +73,7 @@ export const getCategories = () => {
 };
 
 export const listOrders = (userId, token) => {
-    return fetch(`${API}/order/list/${userId}`, {
+    return fetch(`${API}/order/list/${userId}`, { mode: 'no-cors' },{
         method: 'GET',
         headers: {
             Accept: 'application/json',
