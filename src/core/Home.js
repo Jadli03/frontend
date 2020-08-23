@@ -42,7 +42,7 @@ const Home = () => {
       
         <div>
              <Menu />
-             <div className="banner-section mt-4 pt-4">
+             <div className="banner-section mt-4 pt-5">
 			<div className="container">
 				<div className="banner-grids">
 					<div className="col-md-6 banner-grid">
