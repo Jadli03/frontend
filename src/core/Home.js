@@ -8,36 +8,7 @@ import img9 from '../images/img9.jpg';
 import homeimg from '../images/home-img.jpg';
 
 const Home = () => {
-    //  const [ setProductsBySell] = useState([]);
-    //  const [setProductsByArrival] = useState([]);
-    //  const [setError] = useState(false);
-
-    // const loadProductsBySell = () => {
-    //     getProducts('sold').then(data => {
-    //         if (data.error) {
-    //             setError(data.error);
-    //         } else {
-    //             setProductsBySell(data);
-    //         }
-    //     });
-    // };
-
-    // const loadProductsByArrival = () => {
-    //     getProducts('createdAt').then(data => {
-    //         console.log(data);
-    //         if (data.error) {
-    //             setError(data.error);
-    //         } else {
-    //             setProductsByArrival(data);
-    //         }
-    //     });
-    // };
-
-    // useEffect(() => {
-    //     loadProductsByArrival();
-    //     loadProductsBySell();
-    // }, []);
-
+  
     return (
       
         <div>
@@ -48,7 +19,7 @@ const Home = () => {
 					<div className="col-md-6 banner-grid">
 						<h2>FlawinaBeauty</h2>
 						<p><b>We believe in your Skinth Sense</b></p>
-                        <a href="/shop" class="button"> shop now </a>
+                        <a href="/shop" className="button"> shop now </a>
 					</div>
                  
 				<div className="col-md-6 banner-grid1">
