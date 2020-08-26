@@ -12,12 +12,14 @@ import UpdateCategory from './admin/updateCategory';
 import ManageProduct from './admin/ManageProducts';
 import Shop from './core/Shop';
 import Product from './core/Product';
+import About from './core/About';
 const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/shop" exact component={Shop} />
+                <Route path="/about" exact component={About} />
                 <Route path="/signin" exact component={Signin} />
                 <Route path="/signup" exact component={Signup} />
                 <AdminRoute path="/admin/dashboard" exact component={AdminDashboard} />

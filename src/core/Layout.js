@@ -1,6 +1,9 @@
 import React from "react";
 import Menu from "./Menu";
 import "../styles.css";
+
+// jumbotron
+
 const Layout = ({
     title = "Title",
     description = "Description",

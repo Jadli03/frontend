@@ -32,7 +32,8 @@ const Footer = () => {
                     <a href="https://wa.me/919899822063?text=I'm%20interested%20in%20buying%20your%20product" className="nav-item nav-link"><i className="fa fa-whatsapp"></i></a>
 					</div>
 					<p>Phone no. +918882444930, +919899822068</p>
-					<p>E-mail :  Naina.thapa55@gmail.com</p>
+					<p>E-mail : <u>info.flawina@gmail.com</u> </p>
+					<p>E-mail : <u> Naina.thapa55@gmail.com</u> </p>
                     <p>&copy; FlawinaBeauty. All rights reserved </p>
 					</div>
 				<div className="clearfix"></div>
