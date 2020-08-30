@@ -55,7 +55,7 @@ const Menu = ({ history }) => {
                         </Link>
                     )}
 
-                    {!isAuthenticated() && (
+                    {/* {!isAuthenticated() && (
                         <Fragment>
                             <Link
                                 className=" nav-item nav-link"
@@ -65,7 +65,7 @@ const Menu = ({ history }) => {
                                 Signin
                         </Link>
                         </Fragment>
-                    )}
+                    )} */}
 
                     {isAuthenticated() && (
                             <span
@@ -86,7 +86,7 @@ const Menu = ({ history }) => {
                 <div className="navbar-nav ml-auto nav-flex-icons">
                     <a href="https://facebook.com/flawinabeauty/" className="nav-item nav-link"><i className="fa fa-facebook"></i></a>
                     <a href="/"  className="nav-item nav-link"><i className="fa fa-twitter"></i></a>
-                    <a href="/" className="nav-item nav-link"><i className="fa fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/channel/UCQvVa9nbVUBJLSXNrKebrvg" className="nav-item nav-link"><i className="fa fa-youtube"></i></a>
                     <a href="https://instagram.com/flawinabeauty?igshid=c4ubv0xllceo" className="nav-item nav-link"><i className="fa fa-instagram"></i></a>
                     <a href="https://wa.me/919899822063?text=I'm%20interested%20in%20buying%20your%20product" className="nav-item nav-link"><i className="fa fa-whatsapp"></i></a>
 
